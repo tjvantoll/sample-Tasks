@@ -1,0 +1,44 @@
+{
+  "name": "sample-Tasks",
+  "version": "1.0.0",
+  "description": "A Tasks sample, built with the NativeScript framework",
+  "main": "app/package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NativeScript/sample-Tasks.git"
+  },
+  "keywords": [
+    "nativescript",
+    "telerik",
+    "sample",
+    "tasks",
+    "tns",
+    "example"
+  ],
+  "author": "Valio Stoychev",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/NativeScript/sample-Tasks/issues"
+  },
+  "homepage": "https://github.com/NativeScript/sample-Tasks",
+  "devDependencies": {
+    "nativescript-dev-typescript": "^0.3.1",
+    "typescript": "^1.8.9"
+  },
+  "nativescript": {
+    "id": "org.nativescript.sampleTasks",
+    "tns-ios": {
+      "version": "next"
+    },
+    "tns-android": {
+      "version": "next"
+    }
+  },
+  "dependencies": {
+    "sample-tasks-app-options": "file:app_options",
+    "tns-core-modules": "next"
+  }
+}

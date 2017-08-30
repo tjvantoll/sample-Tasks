@@ -1,0 +1,36 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      navigatingTo="navigatingTo">
+  <ios>
+    <Page.actionBar>
+      <ActionBar>
+        <ActionBar.actionItems>
+          <ActionItem icon="res://ic_add" tap="{{ addProject }}" ios.position="right" />
+        </ActionBar.actionItems>
+      </ActionBar>
+    </Page.actionBar>
+  </ios>
+  <GridLayout>
+    <ListView items="{{ projects }}" itemTap="{{ viewProject }}" row="1" cssClass="listView">
+      <ListView.itemTemplate>
+        <StackLayout cssClass="listViewItem">
+          <Label text="{{ project.Name }}" cssClass="listViewItemLabel" textWrap="true" />
+          <Label text="{{ tasksCount, tasksCount | formatTasksCount }}" cssClass="listViewItemHeader" >
+            <!--<Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="{{ tasksCount, tasksCount | formatTasksCount }}" fontAttributes="Bold, Italic" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>-->
+          </Label>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+
+    <AbsoluteLayout cssClass="fabContainer" >
+      <Image src="res://fab_add" tap="{{ addProject }}" cssClass="fab" />
+    </AbsoluteLayout>
+
+    <ActivityIndicator busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

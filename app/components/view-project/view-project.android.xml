@@ -1,0 +1,26 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:vp="components/view-project"
+      navigatingTo="navigatingTo">
+
+  <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem icon="res://ic_edit" tap="editProjectButtonTap" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+
+  <GridLayout rows="auto, *">
+    <Border cssClass="headerBorder">
+      <Label text="{{ project.Name }}" cssClass="fabHeader" />
+    </Border>
+
+    <vp:view-project-common row="1" />
+
+    <AbsoluteLayout row="1" cssClass="upperFabContainer" >
+      <Image src="res://fab_add" tap="addTaskButtonTap" cssClass="fab" />
+    </AbsoluteLayout>
+
+    <ActivityIndicator rowSpan="2" busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

@@ -1,0 +1,25 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="navigatingTo">
+
+  <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem text="{{ strings.save }}" tap="saveButtonTap" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+  
+  <GridLayout rows="*, auto">
+    <ScrollView>
+      <GridLayout rows="auto, auto">
+        <TextField hint="Project name" text="{{ item.Name }}" cssClass="headerTextField"/>
+        <!-- Move this on the text field -->
+        <Border cssClass="textFieldBorder" />
+      </GridLayout>
+    </ScrollView>
+
+    <Button text="{{ strings.delete }}" row="1" tap="deleteButtonTap" cssClass="deleteButton" visibility="{{ editVisibility }}"/>
+
+    <ActivityIndicator cssClass="activityIndicator" busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

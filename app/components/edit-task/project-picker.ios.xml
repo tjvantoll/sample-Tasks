@@ -1,0 +1,8 @@
+<StackLayout cssClass="pickerContainer" tap="projectPickerTap" >
+  <GridLayout columns="*, *, auto" cssClass="pickerContainer">
+    <Label text="Project" cssClass="pickerLabel" />
+    <Label col="1" text="{{ project | getProjectNameForProjectsPicker }}" cssClass="pickerValue" />
+    <Image col="2" src="res://ic_arrow-right" cssClass="pickerIcon" stretch="none" />
+  </GridLayout>
+  <Border cssClass="pickerBorder" />
+</StackLayout>

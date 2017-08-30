@@ -1,0 +1,79 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <Page.optionsMenu>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem icon="res://ic_edit" tap="editTaskButtonTap" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.optionsMenu>
+  <GridLayout rows="*, auto">
+    <ScrollView>
+      <GridLayout rows="auto, auto, *, auto">
+        <GridLayout width="600">
+          <Image stretch="aspectFill" src="{{ pictureUrl }}" visibility="{{ task.Photo ? 'visible' : 'collapsed' }}" cssClass="headerImage" />
+        </GridLayout>
+
+        <GridLayout row="1" rows="auto, auto" columns="auto, *">
+          <Image rowSpan="2" src="{{ task | getStatusImage }}" stretch="none" tap="completeTaskButtonTap" cssClass="completeTaskIcon"/>
+
+          <Label col="1" cssClass="header">
+            <Label.formattedText>
+              <FormattedString>
+                <FormattedString.spans>
+                  <Span text="{{ project | getProjectName(task.Project) }}" fontAttributes="Bold, Italic" />
+                </FormattedString.spans>
+              </FormattedString>
+            </Label.formattedText>
+          </Label>
+
+          <Label row="1" col="1" text="{{ task.Name }}" cssClass="subHeader" textWrap="true"/>
+        </GridLayout>
+
+        <GridLayout row="2" rows="auto, auto, auto" columns="*,*">
+          <Border borderWidth="1" borderColor="#EFE9DC" cssClass="detailsBorder" visibility="{{ task.DueDate || task.ReminderDate ? 'visible' : 'collapsed' }}">
+            <StackLayout cssClass="detailsContainer" orientation="horizontal" visibility="{{ task.DueDate ? 'visible' : 'collapsed' }}">
+              <Image src="res://ic_duedate" cssClass="detailsIcon" stretch="none" />
+              <Label text="{{ task.DueDate | formatDueDate }}" col="1" />
+            </StackLayout>
+          </Border>
+
+          <Border col="1" borderWidth="1" borderColor="#EFE9DC" cssClass="detailsBorder" visibility="{{ task.DueDate || task.ReminderDate ? 'visible' : 'collapsed' }}">
+            <StackLayout cssClass="detailsContainer" orientation="horizontal" visibility="{{ task.ReminderDate ? 'visible' : 'collapsed' }}">
+              <Image src="res://ic_reminder" cssClass="detailsIcon" stretch="none" />
+              <Label text="{{ task | formatReminder }}" col="1" />
+            </StackLayout>
+          </Border>
+
+          <Border row="1" borderWidth="1" borderColor="#EFE9DC" cssClass="detailsBorder" visibility="{{ task.Phone || task.Email ? 'visible' : 'collapsed' }}">
+            <StackLayout cssClass="detailsContainer" orientation="horizontal" visibility="{{ task.Phone ? 'visible' : 'collapsed' }}" >
+              <Image src="res://ic_phone" cssClass="detailsIcon" stretch="none" />
+              <Label text="{{ task.Phone }}" col="1" />
+            </StackLayout>
+          </Border>
+
+          <Border row="1" col="1" borderWidth="1" borderColor="#EFE9DC" cssClass="detailsBorder" visibility="{{ task.Phone || task.Email ? 'visible' : 'collapsed' }}">
+            <StackLayout cssClass="detailsContainer" orientation="horizontal" visibility="{{ task.Email ? 'visible' : 'collapsed' }}">
+              <Image src="res://ic_email" cssClass="detailsIcon" stretch="none" />
+              <Label text="{{ task.Email }}" col="1" />
+            </StackLayout>
+          </Border>
+
+          <Border row="2" colSpan="2" borderWidth="1" borderColor="#EFE9DC" cssClass="detailsBorder" visibility="{{ task.Url ? 'visible' : 'collapsed' }}">
+            <StackLayout cssClass="detailsContainer" orientation="horizontal" >
+              <Image src="res://ic_url" cssClass="detailsIcon" stretch="none" />
+              <Label text="{{ task.Url }}" col="1" />
+            </StackLayout>
+          </Border>
+        </GridLayout>
+
+        <Label row="3" text="{{ task.Notes }}" cssClass="notesLabel" textWrap="true" visibility="{{ task.Notes ? 'visible' : 'collapsed' }}"/>
+      </GridLayout>
+    </ScrollView>
+
+    <AbsoluteLayout cssClass="fabContainer" >
+      <Image src="{{ task | getStatusFab }}" tap="completeTaskButtonTap" cssClass="fab" />
+    </AbsoluteLayout>
+
+    <ActivityIndicator rowSpan="2" cssClass="activityIndicator" busy="{{ isLoading }}"/>
+  </GridLayout>
+</Page>

@@ -1,0 +1,636 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{28997AC2-B859-4BD2-8A63-68CE599BB158}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Xpensity</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Android'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'iOS'">
+    <OutputPath>bin\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60165</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60165/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Android'">
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'iOS'">
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.android.css" />
+    <Content Include="app.ios.css" />
+    <Content Include="App_Resources\Android\drawable-hdpi\fab_add.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\fab_complete.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\fab_completed.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_arrow_drop_down.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_checkmark.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_checkmark_checked.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_close.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_duedate.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_edit.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_email.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_launcher.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_overflow.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_phone.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_photo.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_reminder.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\ic_url.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\login_logo.png" />
+    <Content Include="App_Resources\Android\drawable-hdpi\profile_picture.png" />
+    <Content Include="App_Resources\Android\drawable-ldpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\fab_add.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\fab_complete.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\fab_completed.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\icon.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_arrow_drop_down.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_checkmark.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_checkmark_checked.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_close.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_duedate.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_edit.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_email.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_launcher.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_overflow.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_phone.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_photo.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_reminder.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\ic_url.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\login_logo.png" />
+    <Content Include="App_Resources\Android\drawable-mdpi\profile_picture.png" />
+    <Content Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\fab_add.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\fab_complete.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\fab_completed.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_arrow_drop_down.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_checkmark.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_checkmark_checked.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_close.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_duedate.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_edit.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_email.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_launcher.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_overflow.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_phone.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_photo.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_reminder.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\ic_url.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\login_logo.png" />
+    <Content Include="App_Resources\Android\drawable-xhdpi\profile_picture.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\fab_add.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\fab_complete.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\fab_completed.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_arrow_back.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_arrow_drop_down.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_checkmark.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_checkmark_checked.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_close.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_duedate.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_edit.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_email.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_launcher.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_menu.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_overflow.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_phone.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_photo.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_reminder.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\ic_url.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\login_logo.png" />
+    <Content Include="App_Resources\Android\drawable-xxhdpi\profile_picture.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\ic_launcher.png" />
+    <Content Include="App_Resources\Android\values-v21\colors.xml" />
+    <Content Include="App_Resources\Android\values-v21\styles.xml" />
+    <Content Include="App_Resources\Android\values\colors.xml" />
+    <Content Include="App_Resources\Android\values\strings.xml" />
+    <Content Include="App_Resources\Android\values\styles.xml" />
+    <Content Include="App_Resources\iOS\add-icon%402x.png" />
+    <Content Include="App_Resources\iOS\add-icon%403x.png" />
+    <Content Include="App_Resources\iOS\add-icon.png" />
+    <Content Include="App_Resources\iOS\arrow-right-icon%402x.png" />
+    <Content Include="App_Resources\iOS\arrow-right-icon%403x.png" />
+    <Content Include="App_Resources\iOS\arrow-right-icon.png" />
+    <Content Include="App_Resources\iOS\back-icon%402x.png" />
+    <Content Include="App_Resources\iOS\back-icon%403x.png" />
+    <Content Include="App_Resources\iOS\back-icon.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark%402x.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark%403x.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark_checked%402x.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark_checked%403x.png" />
+    <Content Include="App_Resources\iOS\ic_checkmark_checked.png" />
+    <Content Include="App_Resources\iOS\Default%402x.png" />
+    <Content Include="App_Resources\iOS\Default-568h%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Landscape.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait%402x.png" />
+    <Content Include="App_Resources\iOS\Default-Portrait.png" />
+    <Content Include="App_Resources\iOS\Default.png" />
+    <Content Include="App_Resources\iOS\icon%402x.png" />
+    <Content Include="App_Resources\iOS\icon-40%402x.png" />
+    <Content Include="App_Resources\iOS\icon-40.png" />
+    <Content Include="App_Resources\iOS\icon-60%402x.png" />
+    <Content Include="App_Resources\iOS\icon-60.png" />
+    <Content Include="App_Resources\iOS\icon-72%402x.png" />
+    <Content Include="App_Resources\iOS\icon-72.png" />
+    <Content Include="App_Resources\iOS\icon-76%402x.png" />
+    <Content Include="App_Resources\iOS\icon-76.png" />
+    <Content Include="App_Resources\iOS\Icon-Small%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50%402x.png" />
+    <Content Include="App_Resources\iOS\Icon-Small-50.png" />
+    <Content Include="App_Resources\iOS\Icon-Small.png" />
+    <Content Include="App_Resources\iOS\icon.png" />
+    <Content Include="App_Resources\Android\drawable-xxxhdpi\profile_picture.png" />
+    <Content Include="App_Resources\iOS\ic_close%402.png" />
+    <Content Include="App_Resources\iOS\ic_close%403.png" />
+    <Content Include="App_Resources\iOS\ic_close.png" />
+    <Content Include="App_Resources\iOS\ic_duedate%402.png" />
+    <Content Include="App_Resources\iOS\ic_duedate%403.png" />
+    <Content Include="App_Resources\iOS\ic_duedate.png" />
+    <Content Include="App_Resources\iOS\ic_edit%402.png" />
+    <Content Include="App_Resources\iOS\ic_edit%403.png" />
+    <Content Include="App_Resources\iOS\ic_edit.png" />
+    <Content Include="App_Resources\iOS\ic_email%402.png" />
+    <Content Include="App_Resources\iOS\ic_email%403.png" />
+    <Content Include="App_Resources\iOS\ic_email.png" />
+    <Content Include="App_Resources\iOS\ic_phone%402.png" />
+    <Content Include="App_Resources\iOS\ic_phone%403.png" />
+    <Content Include="App_Resources\iOS\ic_phone.png" />
+    <Content Include="App_Resources\iOS\ic_photo%402.png" />
+    <Content Include="App_Resources\iOS\ic_photo%403.png" />
+    <Content Include="App_Resources\iOS\ic_photo.png" />
+    <Content Include="App_Resources\iOS\ic_reminder%402.png" />
+    <Content Include="App_Resources\iOS\ic_reminder%403.png" />
+    <Content Include="App_Resources\iOS\ic_reminder.png" />
+    <Content Include="App_Resources\iOS\ic_url%402.png" />
+    <Content Include="App_Resources\iOS\ic_url%403.png" />
+    <Content Include="App_Resources\iOS\ic_url.png" />
+    <Content Include="App_Resources\iOS\login_logo%402.png" />
+    <Content Include="App_Resources\iOS\login_logo%403.png" />
+    <Content Include="App_Resources\iOS\login_logo.png" />
+    <Content Include="App_Resources\iOS\profile_picture%402.png" />
+    <Content Include="App_Resources\iOS\profile_picture%403.png" />
+    <Content Include="App_Resources\iOS\profile_picture.png" />
+    <Content Include="components\edit-profile\edit-profile.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="components\edit-project\edit-project.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="components\edit-task\due-date-picker.ios.xml" />
+    <Content Include="components\edit-task\due-date-picker.android.xml" />
+    <Content Include="components\edit-task\project-picker.ios.xml" />
+    <Content Include="components\edit-task\project-picker.android.xml" />
+    <Content Include="components\main\main.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="components\projects\projects.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="components\tasks\tasks.xml" />
+    <Content Include="components\time-picker\time-picker.xml" />
+    <Content Include="components\date-picker\date-picker.xml" />
+    <Content Include="components\list-picker\list-picker.xml" />
+    <Content Include="components\view-project\view-project-common.xml" />
+    <Content Include="components\view-project\view-project.ios.xml" />
+    <Content Include="components\view-project\view-project.android.xml" />
+    <Content Include="components\view-task\view-task.xml" />
+    <Content Include="tns_modules\application-settings\application-settings-common.js" />
+    <Content Include="tns_modules\application-settings\application-settings.android.js" />
+    <Content Include="tns_modules\application-settings\application-settings.ios.js" />
+    <Content Include="tns_modules\application\application-common.js" />
+    <Content Include="tns_modules\application\application.android.js" />
+    <Content Include="tns_modules\application\application.ios.js" />
+    <Content Include="tns_modules\camera\camera-common.js" />
+    <Content Include="tns_modules\camera\camera.android.js" />
+    <Content Include="tns_modules\camera\camera.ios.js" />
+    <Content Include="tns_modules\color\color-common.js" />
+    <Content Include="tns_modules\color\color.android.js" />
+    <Content Include="tns_modules\color\color.ios.js" />
+    <Content Include="tns_modules\color\known-colors.js" />
+    <Content Include="tns_modules\console\console-native.android.js" />
+    <Content Include="tns_modules\console\console-native.ios.js" />
+    <Content Include="tns_modules\console\console.js" />
+    <Content Include="tns_modules\data\observable-array\observable-array.js" />
+    <Content Include="tns_modules\data\observable\observable.js" />
+    <Content Include="tns_modules\data\virtual-array\virtual-array.js" />
+    <Content Include="tns_modules\file-system\file-name-resolver.js" />
+    <Content Include="tns_modules\file-system\file-system-access.android.js" />
+    <Content Include="tns_modules\file-system\file-system-access.ios.js" />
+    <Content Include="tns_modules\file-system\file-system.js" />
+    <Content Include="tns_modules\fps-meter\fps-meter.js" />
+    <Content Include="tns_modules\fps-meter\fps-native.android.js" />
+    <Content Include="tns_modules\fps-meter\fps-native.ios.js" />
+    <Content Include="tns_modules\globals\globals.js" />
+    <Content Include="tns_modules\http\http-request.android.js" />
+    <Content Include="tns_modules\http\http-request.ios.js" />
+    <Content Include="tns_modules\http\http.js" />
+    <Content Include="tns_modules\image-source\image-source-common.js" />
+    <Content Include="tns_modules\image-source\image-source.android.js" />
+    <Content Include="tns_modules\image-source\image-source.ios.js" />
+    <Content Include="tns_modules\js-libs\easysax\easysax.js" />
+    <Content Include="tns_modules\js-libs\esprima\esprima.js" />
+    <Content Include="tns_modules\js-libs\polymer-expressions\path-parser.js" />
+    <Content Include="tns_modules\js-libs\polymer-expressions\polymer-expressions.js" />
+    <Content Include="tns_modules\js-libs\reworkcss\reworkcss.js" />
+    <Content Include="tns_modules\location\location-common.js" />
+    <Content Include="tns_modules\location\location.android.js" />
+    <Content Include="tns_modules\location\location.ios.js" />
+    <Content Include="tns_modules\platform\platform.android.js" />
+    <Content Include="tns_modules\platform\platform.ios.js" />
+    <Content Include="tns_modules\text\formatted-string-common.js" />
+    <Content Include="tns_modules\text\formatted-string.android.js" />
+    <Content Include="tns_modules\text\formatted-string.ios.js" />
+    <Content Include="tns_modules\text\span-common.js" />
+    <Content Include="tns_modules\text\span.android.js" />
+    <Content Include="tns_modules\text\span.ios.js" />
+    <Content Include="tns_modules\text\text.android.js" />
+    <Content Include="tns_modules\text\text.ios.js" />
+    <Content Include="tns_modules\timer\timer.android.js" />
+    <Content Include="tns_modules\timer\timer.ios.js" />
+    <Content Include="tns_modules\trace\trace.js" />
+    <Content Include="tns_modules\ui\activity-indicator\activity-indicator-common.js" />
+    <Content Include="tns_modules\ui\activity-indicator\activity-indicator.android.js" />
+    <Content Include="tns_modules\ui\activity-indicator\activity-indicator.ios.js" />
+    <Content Include="tns_modules\ui\border\border-common.js" />
+    <Content Include="tns_modules\ui\border\border.android.js" />
+    <Content Include="tns_modules\ui\border\border.ios.js" />
+    <Content Include="tns_modules\ui\builder\binding-builder.js" />
+    <Content Include="tns_modules\ui\builder\builder.js" />
+    <Content Include="tns_modules\ui\builder\component-builder.js" />
+    <Content Include="tns_modules\ui\builder\template-builder.js" />
+    <Content Include="tns_modules\ui\button\button-common.js" />
+    <Content Include="tns_modules\ui\button\button.android.js" />
+    <Content Include="tns_modules\ui\button\button.ios.js" />
+    <Content Include="tns_modules\ui\content-view\content-view.js" />
+    <Content Include="tns_modules\ui\core\bindable.js" />
+    <Content Include="tns_modules\ui\core\control-state-change.ios.js" />
+    <Content Include="tns_modules\ui\core\dependency-observable.js" />
+    <Content Include="tns_modules\ui\core\proxy.js" />
+    <Content Include="tns_modules\ui\core\view-common.js" />
+    <Content Include="tns_modules\ui\core\view.android.js" />
+    <Content Include="tns_modules\ui\core\view.ios.js" />
+    <Content Include="tns_modules\ui\core\weak-event-listener.js" />
+    <Content Include="tns_modules\ui\date-picker\date-picker-common.js" />
+    <Content Include="tns_modules\ui\date-picker\date-picker.android.js" />
+    <Content Include="tns_modules\ui\date-picker\date-picker.ios.js" />
+    <Content Include="tns_modules\ui\dialogs\dialogs-common.js" />
+    <Content Include="tns_modules\ui\dialogs\dialogs.android.js" />
+    <Content Include="tns_modules\ui\dialogs\dialogs.ios.js" />
+    <Content Include="tns_modules\ui\editable-text-base\editable-text-base-common.js" />
+    <Content Include="tns_modules\ui\editable-text-base\editable-text-base.android.js" />
+    <Content Include="tns_modules\ui\editable-text-base\editable-text-base.ios.js" />
+    <Content Include="tns_modules\ui\enums\enums.js" />
+    <Content Include="tns_modules\ui\frame\frame-common.js" />
+    <Content Include="tns_modules\ui\frame\frame.android.js" />
+    <Content Include="tns_modules\ui\frame\frame.ios.js" />
+    <Content Include="tns_modules\ui\gestures\gestures-common.js" />
+    <Content Include="tns_modules\ui\gestures\gestures.android.js" />
+    <Content Include="tns_modules\ui\gestures\gestures.ios.js" />
+    <Content Include="tns_modules\ui\image-cache\image-cache-common.js" />
+    <Content Include="tns_modules\ui\image-cache\image-cache.android.js" />
+    <Content Include="tns_modules\ui\image-cache\image-cache.ios.js" />
+    <Content Include="tns_modules\ui\image\image-common.js" />
+    <Content Include="tns_modules\ui\image\image.android.js" />
+    <Content Include="tns_modules\ui\image\image.ios.js" />
+    <Content Include="tns_modules\ui\label\label-common.js" />
+    <Content Include="tns_modules\ui\label\label.android.js" />
+    <Content Include="tns_modules\ui\label\label.ios.js" />
+    <Content Include="tns_modules\ui\layouts\absolute-layout\absolute-layout.js" />
+    <Content Include="tns_modules\ui\layouts\dock-layout\dock-layout.js" />
+    <Content Include="tns_modules\ui\layouts\grid-layout\grid-layout.js" />
+    <Content Include="tns_modules\ui\layouts\layout.js" />
+    <Content Include="tns_modules\ui\layouts\stack-layout\stack-layout.js" />
+    <Content Include="tns_modules\ui\layouts\wrap-layout\wrap-layout.js" />
+    <Content Include="tns_modules\ui\list-picker\list-picker-common.js" />
+    <Content Include="tns_modules\ui\list-picker\list-picker.android.js" />
+    <Content Include="tns_modules\ui\list-picker\list-picker.ios.js" />
+    <Content Include="tns_modules\ui\list-view\list-view-common.js" />
+    <Content Include="tns_modules\ui\list-view\list-view.android.js" />
+    <Content Include="tns_modules\ui\list-view\list-view.ios.js" />
+    <Content Include="tns_modules\ui\page\page-common.js" />
+    <Content Include="tns_modules\ui\page\page.android.js" />
+    <Content Include="tns_modules\ui\page\page.ios.js" />
+    <Content Include="tns_modules\ui\placeholder\placeholder-common.js" />
+    <Content Include="tns_modules\ui\placeholder\placeholder.android.js" />
+    <Content Include="tns_modules\ui\placeholder\placeholder.ios.js" />
+    <Content Include="tns_modules\ui\progress\progress-common.js" />
+    <Content Include="tns_modules\ui\progress\progress.android.js" />
+    <Content Include="tns_modules\ui\progress\progress.ios.js" />
+    <Content Include="tns_modules\ui\scroll-view\scroll-view-common.js" />
+    <Content Include="tns_modules\ui\scroll-view\scroll-view.android.js" />
+    <Content Include="tns_modules\ui\scroll-view\scroll-view.ios.js" />
+    <Content Include="tns_modules\ui\search-bar\search-bar-common.js" />
+    <Content Include="tns_modules\ui\search-bar\search-bar.android.js" />
+    <Content Include="tns_modules\ui\search-bar\search-bar.ios.js" />
+    <Content Include="tns_modules\ui\segmented-bar\segmented-bar-common.js" />
+    <Content Include="tns_modules\ui\segmented-bar\segmented-bar.android.js" />
+    <Content Include="tns_modules\ui\segmented-bar\segmented-bar.ios.js" />
+    <Content Include="tns_modules\ui\slider\slider-common.js" />
+    <Content Include="tns_modules\ui\slider\slider.android.js" />
+    <Content Include="tns_modules\ui\slider\slider.ios.js" />
+    <Content Include="tns_modules\ui\styling\converters.js" />
+    <Content Include="tns_modules\ui\styling\css-selector.js" />
+    <Content Include="tns_modules\ui\styling\style-property.js" />
+    <Content Include="tns_modules\ui\styling\style-scope.js" />
+    <Content Include="tns_modules\ui\styling\style.js" />
+    <Content Include="tns_modules\ui\styling\stylers-common.js" />
+    <Content Include="tns_modules\ui\styling\stylers.android.js" />
+    <Content Include="tns_modules\ui\styling\stylers.ios.js" />
+    <Content Include="tns_modules\ui\styling\styling.js" />
+    <Content Include="tns_modules\ui\styling\visual-state-constants.js" />
+    <Content Include="tns_modules\ui\styling\visual-state.js" />
+    <Content Include="tns_modules\ui\switch\switch-common.js" />
+    <Content Include="tns_modules\ui\switch\switch.android.js" />
+    <Content Include="tns_modules\ui\switch\switch.ios.js" />
+    <Content Include="tns_modules\ui\tab-view\tab-view-common.js" />
+    <Content Include="tns_modules\ui\tab-view\tab-view.android.js" />
+    <Content Include="tns_modules\ui\tab-view\tab-view.ios.js" />
+    <Content Include="tns_modules\ui\text-base\text-base.js" />
+    <Content Include="tns_modules\ui\text-field\text-field-common.js" />
+    <Content Include="tns_modules\ui\text-field\text-field.android.js" />
+    <Content Include="tns_modules\ui\text-field\text-field.ios.js" />
+    <Content Include="tns_modules\ui\text-view\text-view-common.js" />
+    <Content Include="tns_modules\ui\text-view\text-view.android.js" />
+    <Content Include="tns_modules\ui\text-view\text-view.ios.js" />
+    <Content Include="tns_modules\ui\time-picker\time-picker-common.js" />
+    <Content Include="tns_modules\ui\time-picker\time-picker.android.js" />
+    <Content Include="tns_modules\ui\time-picker\time-picker.ios.js" />
+    <Content Include="tns_modules\ui\tool-bar\tool-bar-common.js" />
+    <Content Include="tns_modules\ui\tool-bar\tool-bar.android.js" />
+    <Content Include="tns_modules\ui\tool-bar\tool-bar.ios.js" />
+    <Content Include="tns_modules\ui\web-view\web-view-common.js" />
+    <Content Include="tns_modules\ui\web-view\web-view.android.js" />
+    <Content Include="tns_modules\ui\web-view\web-view.ios.js" />
+    <Content Include="tns_modules\utils\android_constants.js" />
+    <Content Include="tns_modules\utils\module-merge.js" />
+    <Content Include="tns_modules\utils\number-utils.js" />
+    <Content Include="tns_modules\utils\types.js" />
+    <Content Include="tns_modules\utils\utils-common.js" />
+    <Content Include="tns_modules\utils\utils.android.js" />
+    <Content Include="tns_modules\utils\utils.ios.js" />
+    <Content Include="tns_modules\xml\xml.js" />
+    <TypeScriptCompile Include="components\edit-profile\edit-profile-view-model.ts" />
+    <TypeScriptCompile Include="components\edit-profile\edit-profile.ts" />
+    <TypeScriptCompile Include="components\edit-project\edit-project-view-model.ts" />
+    <TypeScriptCompile Include="components\edit-project\edit-project.ts" />
+    <TypeScriptCompile Include="components\edit-task\due-date-picker.ts" />
+    <TypeScriptCompile Include="components\edit-task\project-picker.ts" />
+    <TypeScriptCompile Include="components\edit-task\edit-task-view-model.ts" />
+    <TypeScriptCompile Include="components\main\main.ts" />
+    <TypeScriptCompile Include="components\main\main-view-model.ts" />
+    <TypeScriptCompile Include="components\projects\projects-view-model.ts" />
+    <TypeScriptCompile Include="components\projects\projects.ts" />
+    <TypeScriptCompile Include="components\tasks\tasks-view-model.ts" />
+    <TypeScriptCompile Include="components\tasks\tasks.ts" />
+    <TypeScriptCompile Include="components\time-picker\time-picker-view-model.ts" />
+    <TypeScriptCompile Include="components\time-picker\time-picker.ts" />
+    <TypeScriptCompile Include="components\date-picker\date-picker-view-model.ts" />
+    <TypeScriptCompile Include="components\date-picker\date-picker.ts" />
+    <TypeScriptCompile Include="components\edit-task\edit-task.ts" />
+    <TypeScriptCompile Include="components\list-picker\list-picker-view-model.ts" />
+    <TypeScriptCompile Include="components\list-picker\list-picker.ts" />
+    <TypeScriptCompile Include="components\login\login.ts" />
+    <Content Include="components\edit-task\edit-task.xml" />
+    <Content Include="components\login\login.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <TypeScriptCompile Include="components\sign-up\sign-up.ts" />
+    <Content Include="components\sign-up\sign-up.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="components\test\page1.xml" />
+    <Content Include="lib\everlive.js" />
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LICENSE" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="components\common\edit-view-model-base.ts" />
+    <TypeScriptCompile Include="components\common\view-model-base.ts" />
+    <TypeScriptCompile Include="components\login\login-view-model.ts" />
+    <TypeScriptCompile Include="components\sign-up\sign-up-view-model.ts" />
+    <TypeScriptCompile Include="components\test\page1-view-model.ts" />
+    <TypeScriptCompile Include="components\test\page1.ts" />
+    <TypeScriptCompile Include="components\view-project\view-project-common.ts" />
+    <TypeScriptCompile Include="components\view-project\view-project-view-model.ts" />
+    <TypeScriptCompile Include="components\view-task\view-task-view-model.ts" />
+    <TypeScriptCompile Include="components\view-project\view-project.ts" />
+    <TypeScriptCompile Include="components\view-task\view-task.ts" />
+    <TypeScriptCompile Include="resources\strings.android.ts" />
+    <TypeScriptCompile Include="resources\strings.ios.ts" />
+    <TypeScriptCompile Include="tns_modules\android17.d.ts" />
+    <TypeScriptCompile Include="tns_modules\application-settings\application-settings.d.ts" />
+    <TypeScriptCompile Include="tns_modules\application\application.d.ts" />
+    <TypeScriptCompile Include="tns_modules\camera\camera.d.ts" />
+    <TypeScriptCompile Include="tns_modules\color\color.d.ts" />
+    <TypeScriptCompile Include="tns_modules\console\console.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\observable-array\observable-array.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\observable\observable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\data\virtual-array\virtual-array.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.android.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.d.ts" />
+    <TypeScriptCompile Include="tns_modules\declarations.ios.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-name-resolver.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-system-access.d.ts" />
+    <TypeScriptCompile Include="tns_modules\file-system\file-system.d.ts" />
+    <TypeScriptCompile Include="tns_modules\fps-meter\fps-meter.d.ts" />
+    <TypeScriptCompile Include="tns_modules\fps-meter\fps-native.d.ts" />
+    <TypeScriptCompile Include="tns_modules\http\http.d.ts" />
+    <TypeScriptCompile Include="tns_modules\image-source\image-source.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ios.d.ts" />
+    <TypeScriptCompile Include="tns_modules\js-libs\esprima\esprima.d.ts" />
+    <TypeScriptCompile Include="tns_modules\js-libs\reworkcss\reworkcss.d.ts" />
+    <TypeScriptCompile Include="tns_modules\libjs.d.ts" />
+    <TypeScriptCompile Include="tns_modules\location\location.d.ts" />
+    <TypeScriptCompile Include="tns_modules\platform\platform.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\formatted-string.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\span.d.ts" />
+    <TypeScriptCompile Include="tns_modules\text\text.d.ts" />
+    <TypeScriptCompile Include="tns_modules\timer\timer.d.ts" />
+    <TypeScriptCompile Include="tns_modules\trace\trace.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\activity-indicator\activity-indicator.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\border\border.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\button\button.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\content-view\content-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\bindable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\control-state-change.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\dependency-observable.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\proxy.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\core\weak-event-listener.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\date-picker\date-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\dialogs\dialogs.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\editable-text-base\editable-text-base.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\enums\enums.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\frame\frame.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\gestures\gestures.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\image-cache\image-cache.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\image\image.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\label\label.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\absolute-layout\absolute-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\dock-layout\dock-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\grid-layout\grid-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\stack-layout\stack-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\layouts\wrap-layout\wrap-layout.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\list-picker\list-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\list-view\list-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\page\page.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\placeholder\placeholder.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\progress\progress.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\scroll-view\scroll-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\search-bar\search-bar.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\segmented-bar\segmented-bar.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\slider\slider.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\css-selector.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\style-property.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\stylers.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\styling.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\styling\visual-state-constants.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\switch\switch.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\tab-view\tab-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-base\text-base.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-field\text-field.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\text-view\text-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\time-picker\time-picker.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\tool-bar\tool-bar.d.ts" />
+    <TypeScriptCompile Include="tns_modules\ui\web-view\web-view.d.ts" />
+    <TypeScriptCompile Include="tns_modules\utils\types.d.ts" />
+    <TypeScriptCompile Include="tns_modules\utils\utils.d.ts" />
+    <TypeScriptCompile Include="tns_modules\xml\xml.d.ts" />
+    <TypeScriptCompile Include="utils\action-bar.ts" />
+    <TypeScriptCompile Include="utils\constants.ts" />
+    <TypeScriptCompile Include="utils\navigation.ts" />
+    <TypeScriptCompile Include="utils\notifications.ts" />
+    <TypeScriptCompile Include="utils\service.ts" />
+    <TypeScriptCompile Include="utils\views.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tns_modules\application-settings\package.json" />
+    <Content Include="tns_modules\application\package.json" />
+    <Content Include="tns_modules\camera\package.json" />
+    <Content Include="tns_modules\color\package.json" />
+    <Content Include="tns_modules\console\package.json" />
+    <Content Include="tns_modules\data\observable-array\package.json" />
+    <Content Include="tns_modules\data\observable\package.json" />
+    <Content Include="tns_modules\data\virtual-array\package.json" />
+    <Content Include="tns_modules\file-system\package.json" />
+    <Content Include="tns_modules\fps-meter\package.json" />
+    <Content Include="tns_modules\globals\package.json" />
+    <Content Include="tns_modules\http\package.json" />
+    <Content Include="tns_modules\image-source\package.json" />
+    <Content Include="tns_modules\js-libs\easysax\package.json" />
+    <Content Include="tns_modules\js-libs\esprima\package.json" />
+    <Content Include="tns_modules\js-libs\polymer-expressions\package.json" />
+    <Content Include="tns_modules\js-libs\reworkcss\package.json" />
+    <Content Include="tns_modules\location\package.json" />
+    <Content Include="tns_modules\package.json" />
+    <Content Include="tns_modules\platform\package.json" />
+    <Content Include="tns_modules\text\package.json" />
+    <Content Include="tns_modules\timer\package.json" />
+    <Content Include="tns_modules\trace\package.json" />
+    <Content Include="tns_modules\ui\activity-indicator\package.json" />
+    <Content Include="tns_modules\ui\border\package.json" />
+    <Content Include="tns_modules\ui\builder\package.json" />
+    <Content Include="tns_modules\ui\button\package.json" />
+    <Content Include="tns_modules\ui\content-view\package.json" />
+    <Content Include="tns_modules\ui\date-picker\package.json" />
+    <Content Include="tns_modules\ui\dialogs\package.json" />
+    <Content Include="tns_modules\ui\editable-text-base\package.json" />
+    <Content Include="tns_modules\ui\enums\package.json" />
+    <Content Include="tns_modules\ui\frame\package.json" />
+    <Content Include="tns_modules\ui\gestures\package.json" />
+    <Content Include="tns_modules\ui\image-cache\package.json" />
+    <Content Include="tns_modules\ui\image\package.json" />
+    <Content Include="tns_modules\ui\label\package.json" />
+    <Content Include="tns_modules\ui\layouts\absolute-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\dock-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\grid-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\stack-layout\package.json" />
+    <Content Include="tns_modules\ui\layouts\wrap-layout\package.json" />
+    <Content Include="tns_modules\ui\list-picker\package.json" />
+    <Content Include="tns_modules\ui\list-view\package.json" />
+    <Content Include="tns_modules\ui\page\package.json" />
+    <Content Include="tns_modules\ui\placeholder\package.json" />
+    <Content Include="tns_modules\ui\progress\package.json" />
+    <Content Include="tns_modules\ui\scroll-view\package.json" />
+    <Content Include="tns_modules\ui\search-bar\package.json" />
+    <Content Include="tns_modules\ui\segmented-bar\package.json" />
+    <Content Include="tns_modules\ui\slider\package.json" />
+    <Content Include="tns_modules\ui\styling\package.json" />
+    <Content Include="tns_modules\ui\switch\package.json" />
+    <Content Include="tns_modules\ui\tab-view\package.json" />
+    <Content Include="tns_modules\ui\text-base\package.json" />
+    <Content Include="tns_modules\ui\text-field\package.json" />
+    <Content Include="tns_modules\ui\text-view\package.json" />
+    <Content Include="tns_modules\ui\time-picker\package.json" />
+    <Content Include="tns_modules\ui\tool-bar\package.json" />
+    <Content Include="tns_modules\ui\web-view\package.json" />
+    <Content Include="tns_modules\xml\package.json" />
+  </ItemGroup>
+</Project>

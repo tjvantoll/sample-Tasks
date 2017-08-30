@@ -1,0 +1,21 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      navigatingTo="navigatingTo" >
+  <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem text="{{ strings.done }}" tap="doneMenuItemTap" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+  <GridLayout>
+    <ListView items="{{ items }}" itemTap="itemTap" >
+      <ListView.itemTemplate>
+        <GridLayout cssClass="{{ isSelected ? 'itemContainer-selected' : 'itemContainer' }}">
+          <Label text="{{ data.Name }}" />
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+
+    <ActivityIndicator busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

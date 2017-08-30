@@ -1,0 +1,33 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+  <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem text="{{ strings.save }}" tap="saveButtonTap" ios.position="right" android.position="actionBar" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+  <GridLayout>
+    <ScrollView>
+      <StackLayout>
+        <Border borderWidth="2" borderColor="#554E4A" cssClass="profilePictureContainer">
+          <Image src="res://profile_picture" stretch="none" cssClass="profilePicture" />
+        </Border>
+
+        <TextField hint="name" text="{{ user.DisplayName }}"/>
+        <Border cssClass="textFieldBorder" />
+        <TextField hint="e-mail" text="{{ user.Email }}" autocapitalizationType="none" keyboardType="email"/>
+        <Border cssClass="textFieldBorder" />
+
+        <TextField margin="32 16 0 16" hint="old password" text="{{ oldPassword }}" secure="true" />
+        <Border cssClass="textFieldBorder" />
+        <TextField hint="new password" text="{{ newPassword }}" secure="true" />
+        <Border cssClass="textFieldBorder" />
+        <TextField hint="confirm password" text="{{ confirmPassword }}" secure="true" />
+        <Border cssClass="textFieldBorder" />
+
+      </StackLayout>
+    </ScrollView>
+
+    <ActivityIndicator busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

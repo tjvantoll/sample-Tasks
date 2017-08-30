@@ -1,0 +1,19 @@
+<GridLayout columns="2*, *">
+  <StackLayout col="0" cssClass="pickerContainer" tap="datePickerTap" >
+    <Label text="Due date" cssClass="pickerLabel" />
+    <GridLayout columns="*, auto" cssClass="innerContainer">
+      <Label text="{{ item.DueDate | formatDate }}" cssClass="pickerValue" />
+      <Image col="1" src="res://ic_arrow_drop_down" cssClass="pickerIcon" stretch="none" />
+    </GridLayout>
+    <Border cssClass="pickerBorder" />
+  </StackLayout>
+
+  <StackLayout col="1" margin="0 4 0 16" cssClass="pickerContainer" tap="timePickerTap" >
+    <Label text="Time" cssClass="pickerLabel" />
+    <GridLayout columns="*, auto" cssClass="innerContainer">
+      <Label text="{{ item.DueDate  | formatTime }}" cssClass="pickerValue" />
+      <Image col="1" src="res://ic_arrow_drop_down" cssClass="pickerIcon" stretch="none" />
+    </GridLayout>
+    <Border cssClass="pickerBorder" />
+  </StackLayout>
+</GridLayout>

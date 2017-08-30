@@ -1,0 +1,13 @@
+*/bin
+*/obj
+*.user-settings.xml
+.DS_Store
+*.map
+*.log
+node_modules/
+
+/platforms/
+/lib/
+/hooks/
+/tsconfig.json
+/references.d.ts

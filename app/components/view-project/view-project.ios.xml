@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      xmlns:vp="components/view-project"
+      navigatingTo="navigatingTo">
+  <Page.actionBar>
+    <ActionBar>
+      <ActionBar.actionItems>
+        <ActionItem icon="res://ic_edit" tap="editProjectButtonTap" ios.position="right" />
+        <ActionItem icon="res://ic_add" tap="addTaskButtonTap" ios.position="right" />
+      </ActionBar.actionItems>
+    </ActionBar>
+  </Page.actionBar>
+  <GridLayout >
+    <vp:view-project-common />
+    <ActivityIndicator busy="{{ isLoading }}" />
+  </GridLayout>
+</Page>

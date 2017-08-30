@@ -1,0 +1,33 @@
+﻿<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:tsd="controls/sidedrawer" >
+  <tsd:SideDrawer drawerContentSize="200" drawerLocation="Left" id="sideDrawer">
+    <tsd:SideDrawer.drawerTransition>
+      <tsd:FadeTransition/>
+    </tsd:SideDrawer.drawerTransition>
+    <tsd:SideDrawer.drawerContent>
+      <GridLayout rows="*, auto">
+        <StackLayout style="background-color: green">
+          <Label cssClass="drawer" text="Inside the Side Drawer"/>
+          <Button tap="{{ closeSideDrawer }}" text="Hide SD"/>
+        </StackLayout>
+      </GridLayout>
+    </tsd:SideDrawer.drawerContent>
+    <tsd:SideDrawer.mainContent>
+      <StackLayout cssClass="mainContent">
+        <Label cssClass="title" text="Show the Side Drawer"/>
+        <StackLayout orientation="vertical">
+          <Button tap="{{ closeSideDrawer }}" text="Hide SD"/>
+          <Button tap="{{ showSideDrawer }}" text="Show SD"/>
+          <Button tap="{{ FadeSD }}" text="Fade"/>
+          <Button tap="{{ PushSD }}" text="Push"/>
+          <Button tap="{{ RevealSD }}" text="Reveal"/>
+          <Button tap="{{ ReverseSD }}" text="Reverse"/>
+          <Button tap="{{ ScaleDownPusherSD }}" text="ScaleDown"/>
+          <Button tap="{{ ScaleUpSD }}" text="ScaleUp"/>
+          <Button tap="{{ SlideAlongSD }}" text="SlideAlong"/>
+          <Button tap="{{ SlideInOnTopSD }}" text="SlideInOnTop"/>
+        </StackLayout>
+      </StackLayout>
+    </tsd:SideDrawer.mainContent>
+  </tsd:SideDrawer>
+</Page>

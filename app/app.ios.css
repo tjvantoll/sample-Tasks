@@ -1,0 +1,240 @@
+Page, ListView {
+    background-color: #F7F4ED;
+}
+
+Label {
+    color: #55443B;
+    font-size: 16;
+    vertical-align: center;
+}
+
+TextField, TextView {
+    margin: 12 16 4 16;
+}
+
+ActivityIndicator {
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.segmentedBarContainer {
+    background-color: #CDDC39;
+    padding: 12;
+}
+
+.segmentedBar {
+    background-color: #CDDC39;
+}
+
+.listViewItem {
+    padding: 16 16 16 30;
+    background-color: #F7F4ED;
+}
+
+.listViewItemHeader {
+    font-size: 18;
+}
+
+.listViewItemLabel {
+    font-size: 24;
+}
+
+.listViewItemIcon {
+    vertical-align: center;
+    margin-right: 16;
+}
+
+.completeTaskIcon {
+    vertical-align: center;
+    margin-left: 16;
+}
+
+.fab {
+    margin: 0 16 28 16;
+}
+
+.fabContainer {
+    vertical-align: bottom;
+    horizontal-align: right;
+}
+
+.header {
+    font-size: 26;
+    margin: 8 16 0 16;
+}
+
+.subHeader {
+    font-size: 30;
+    margin: 0 16 8 16;
+}
+
+.detailsBorder {
+}
+
+.detailsContainer {
+    padding: 16 16 16 20;
+}
+
+.detailsIcon {
+    margin-right: 8;
+    vertical-align: center;
+}
+
+.detailsTextField {
+    margin: 0 12 0 4;
+}
+
+.notesLabel {
+    color: #55443B;
+    margin: 8 16 8 16;
+}
+
+.headerTextField {
+    font-size: 28;
+    margin: 32 16 0 16;
+}
+
+.pickerContainer {
+    margin: 0 4 0 4;
+}
+
+.pickerLabel {
+}
+
+.pickerValue {
+    color: #8F8F8F;
+    margin: 0;
+    horizontal-align: right;
+}
+
+.pickerIcon {
+    vertical-align: center;
+    margin-left: 16;
+}
+
+.pickerBorder {
+    background-color: #D1D1D1;
+    height: 1;
+}
+
+.textFieldBorder {
+    background-color: #D1D1D1;
+    height: 1;
+    margin: 0 16 0 16;
+}
+
+.detailsTextFieldBorder {
+    background-color: #D1D1D1;
+    height: 1;
+    margin: 0;
+}
+
+.innerContainer {
+}
+
+.detailsContainer {
+    padding: 8 16 8 16;
+}
+
+.notesTextView {
+    margin: 8 16 8 16;
+}
+
+.deleteButton {
+    background-color: #FF5252;
+    color: #FFFFFF;
+    margin: 16;
+    height: 44;
+}
+
+.primaryButton {
+    background-color: #259B24;
+    color: #FFFFFF;
+    margin: 16 16 0 16;
+}
+
+.secondaryButton {
+    color: #259B24;
+    background-color: #00FFFFFF;
+    margin: 16;
+}
+
+.logo {
+    horizontal-align: center;
+    margin-top: 40
+}
+
+.picturePreview {
+    width: 50;
+    height: 50;
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.headerBorder {
+    background-color: #CDDC39;
+    margin-bottom: 30;
+}
+
+.fabHeader {
+    font-size: 30;
+    margin: 16 16 16 80;
+}
+
+.upperFabContainer {
+    vertical-align: top;
+    horizontal-align: left;
+    margin-top: -60;
+}
+
+.profilePictureContainer {
+    margin: 32, 0, 32, 0;
+    horizontal-align: center;
+}
+
+.profilePicture {
+    horizontal-align: center;
+    vertical-align: center;
+}
+
+.sideDrawerContent {
+    background-color: #F7F4ED;
+}
+
+.sideDrawerHeader {
+    background-color: #FAC950;
+    padding: 32 0 16 0;
+    margin-bottom: 8;
+}
+
+.sideDrawerProfilePictureContainer {
+    margin-bottom: 16;
+    horizontal-align: center;
+}
+
+.sideDrawerLabel {
+    horizontal-align: center;
+}
+
+.itemContainer {
+    padding: 16;
+    background-color: #F7F4ED;
+}
+
+.itemContainer-selected {
+    padding: 16;
+    background-color: #FDEFCA;
+}
+
+.menuSeparator {
+    height: 1;
+    background-color: #EFE9DC;
+}
+
+.menuButton {
+    padding: 16;
+}
+
+.menuButtonContent {
+    vertical-align: center;
+}
